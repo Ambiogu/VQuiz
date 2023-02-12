@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="LAQuiz.js"></script>
+    <script src="EUQuiz.js"></script>
+    <script src="HBQuiz.js"></script>
+    <link rel="stylesheet" href="Resposive.css">
+    <style>
+        #h{
+            background-color: #FE5D5D;
+        }
+
+        #h:hover {
+            background-color: #FF0000;
+            transition: 1s;
+        }
+
+        #optionA, #optionB, #optionC, #optionC, #optionD {
+            background-color: #FFF;
+            font-size: 18px;
+        }
+
+        #optionA:hover {
+            background-color: #A2FF93;
+            transition: 0.5s;
+        }
+
+        #optionB:hover {
+            background-color: #A2FF93;
+            transition: 0.5s;
+        }
+
+        #optionC:hover {
+            background-color: #A2FF93;
+            transition: 0.5s;
+        }
+
+        #optionD:hover {
+            background-color: #A2FF93;
+            transition: 0.5s;
+        }
+
+        #fstDiv {
+            display: inline-block;
+            display: flex;
+        }
+
+        #SndDiv {
+            background-color: #FFF;
+            box-shadow: 5px 10px 5px #A5A5A5;
+            padding: 200px 100px 0 100px;
+        }
+
+        .SSndDiv {
+            padding: 20px 35px;
+        }
+
+        .Logo {
+            display: none;
+        }
+
+        #trdDiv {
+            padding: 20px 45px;
+            margin: 200px 50px 0 50px;
+        }
+
+        #question {
+            font-size: 24px;
+        }
+
+        @media only screen and (max-width:600px){
+            #fstDiv{
+                display: none;
+            }
+            
+            #SndDiv{
+                background-color: transparent;
+                box-shadow: none;
+                padding: 100px 50px 0 50px;
+            }
+
+            .SSndDiv {
+                padding: 60px 50px;
+                background-color: #FFF;
+            }
+
+            .Logo {
+                display: block;
+            }
+
+            #trdDiv {
+                padding: 20px 45px;
+                margin: 150px 28px 0 28px;
+            }
+
+            #question {
+                font-size: 18px;
+            }
+
+            #optionA, #optionB, #optionC, #optionC, #optionD {
+            font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 2000px){
+            #trdDiv {
+                margin: 100px 50px 0 50px;
+            }
+        }
+
+    </style>
+</head>
+<body style="margin: 0 auto; display: flex; justify-content: center; background-color: #FFF; background-image: url(https://cdn.pixabay.com/photo/2019/06/10/11/35/learning-4264032_960_720.jpg);">
+    <div id="fstDiv" style="padding: 250px 100px; align-items: center; flex-direction: column;  background-color: #FFF; border-radius: 5px; box-shadow: -5px 10px 5px #A5A5A5;">
+        <img src="images/vquiz.png">
+        <p style="font-size: 35px; font-family: sans-serif; text-align: center; margin: 0;">Challenge <br> your friends <br> to see who has <br> more knowledge</p>
+    </div>
+    <div id="SndDiv" style="display: inline-block; text-align: center; border-radius: 5px;">
+        <div class="SSndDiv" style="border-radius: 5px; box-shadow: 1px 1px 8px 1px #F4A3FE; ">
+            <img class="Logo" src="images/vquiz.png">
+            <h2 style="padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; color: #ED59FF;">Choose a Quiz</h2>
+            <hr style="border: 1px solid  #E2E2E2;">
+            <h4  onclick="showLAq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer; color: #FFF;">Latin America</h4>
+            <h4  onclick="showEUq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer; color: #FFF;">Europe</h4>
+            <h4  onclick="showHBq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer; color: #FFF;">Human Body</h4>
+        </div>
+    </div>
+    <div>
+        <div id="trdDiv" style="text-align: center; background-color: #FFF; border-radius: 5px; box-shadow: 1px 1px 30px #A5A5A5; padding-bottom: 30px; display: none;">
+            <h2 id="question" style="font-family: sans-serif; color: #C000E6;"></h2>
+            <h3 id="optionA" onclick="LAcheckA('A');EUcheckA('A');HBcheckA('A');" style="font-family: sans-serif; padding: 8px 10px; border-radius: 5px; border: 0.5px solid #EEBEFF; cursor: pointer;"></h3>
+            <h3 id="optionB" onclick="LAcheckA('B');EUcheckA('B');HBcheckA('B');" style="font-family: sans-serif; padding: 8px 10px; border-radius: 5px; border: 0.5px solid #EEBEFF; cursor: pointer;"></h3>
+            <h3 id="optionC" onclick="LAcheckA('C');EUcheckA('C');HBcheckA('C');" style="font-family: sans-serif; padding: 8px 10px; border-radius: 5px; border: 0.5px solid #EEBEFF; cursor: pointer;"></h3>
+            <h3 id="optionD" onclick="LAcheckA('D');EUcheckA('D');HBcheckA('D');" style="font-family: sans-serif; padding: 8px 10px; border-radius: 5px; border: 0.5px solid #EEBEFF; cursor: pointer; margin-bottom: 60px;"></h3>
+            <div style="padding: 10px; border-radius: 5px; border: 0.5px solid #A5A5A5;">
+                <h3 style="font-family: sans-serif;">Score:</h3>
+                <div style="display: flex; flex-direction:row; justify-content: center; align-items: center;">
+                    <h3 id="pScore" style="color: green; margin-right: 80px; margin-left: 20px;">0</h3>
+                    <h3 id="nScore" style="color: red; margin-right: 20px;">0</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
