@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VQuiz</title>
     <script src="LAQuiz.js"></script>
     <script src="EUQuiz.js"></script>
     <script src="HBQuiz.js"></script>
+    <!--<script src="testing.js"></script>-->
     <style>
         #h{
             background-color: #FE5D5D;
+            color: #FFF;
         }
 
         #h:hover {
@@ -124,6 +126,10 @@
                 transition: 0.5s;
             }
 
+            #h {
+                color: #000;
+            }
+
         }
 
         @media only screen and (max-width: 1025px){
@@ -170,9 +176,9 @@
             <img class="Logo" src="images/vquiz.png">
             <h2 style="padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; color: #ED59FF;">Choose a Quiz</h2>
             <hr style="border: 1px solid  #E2E2E2;">
-            <h4  onclick="showLAq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer; color: #FFF;">Latin America</h4>
-            <h4  onclick="showEUq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer; color: #FFF;">Europe</h4>
-            <h4  onclick="showHBq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer; color: #FFF;">Human Body</h4>
+            <h4  onclick="showLAq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer;">Latin America</h4>
+            <h4  onclick="showEUq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer;">Europe</h4>
+            <h4  onclick="showHBq()" id="h" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0; font-weight: 100; border-radius: 5px; cursor: pointer;">Human Body</h4>
         </div>
     </div>
     <div>
@@ -191,5 +197,6 @@
             </div>
         </div>
     </div>
+    <!-- LAcheckA('B');EUcheckA('B');HBcheckA('B'); -->
 </body>
 </html>
